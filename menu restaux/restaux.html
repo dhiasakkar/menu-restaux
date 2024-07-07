@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="resataux.css">
+</head>
+
+<body>
+    <h1>WELCOME</h1><br>
+    <h2>MLEWI</h2>
+    <input type="checkbox" class="item" value="1200"> mlewi salami: 1200<br>
+    <input type="checkbox" class="item" value="1300"> mlewi thon: 1300<br>
+    <input type="checkbox" class="item" value="1500"> mlewi jombon: 1500<br>
+    <input type="checkbox" class="item" value="2000"> mlewi scalope: 2000<br>
+    <h2>PIZZA</h2>
+    <input type="checkbox" class="item" value="1200"> pizza 4 seasons: 1200<br>
+    <input type="checkbox" class="item" value="1300"> pizza thon: 1300<br>
+    <input type="checkbox" class="item" value="1500"> pizza jambon: 1500<br>
+    <input type="checkbox" class="item" value="2000"> pizza scalope: 2000<br>
+    <h2>TABOUNA</h2>
+    <input type="checkbox" class="item" value="1200"> tabouna simple: 1200<br>
+    <input type="checkbox" class="item" value="1300"> tabouna thon: 1300<br>
+    <input type="checkbox" class="item" value="1500"> tabouna jambon: 1500<br>
+    <input type="checkbox" class="item" value="2000"> tabouna scalope: 2000<br>
+
+    <button type="button" onclick="updateTotal()">Calculate</button>
+    <div>Total: <span id="total">0</span></div>
+
+    <script>
+        function updateTotal() {
+            let checkboxes = document.querySelectorAll('.item');
+            let total = 0;
+
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    total += parseFloat(checkbox.value);
+                }
+            });
+
+            document.getElementById('total').innerText = total;
+        }
+    </script>
+</body>
+
+</html>

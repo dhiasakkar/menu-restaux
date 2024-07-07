@@ -1,0 +1,17 @@
+body {
+    background-image: url("4.jpg");
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+input {
+    size: 10px;
+}
